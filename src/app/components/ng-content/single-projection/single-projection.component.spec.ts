@@ -8,9 +8,8 @@ describe('SingleProjectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SingleProjectionComponent ]
-    })
-    .compileComponents();
+      declarations: [SingleProjectionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SingleProjectionComponent);
     component = fixture.componentInstance;
