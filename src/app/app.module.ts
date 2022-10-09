@@ -15,6 +15,7 @@ import {
 } from './components/todo';
 import { MaterialModule } from './modules/material.module';
 import { NavigationComponent } from './navigation/navigation.component';
+import { UnderlineDirective } from './directives/underline.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     TodoComponent,
     TodoListComponent,
     TodoItemComponent,
+    UnderlineDirective,
   ],
   imports: [
     BrowserModule,
