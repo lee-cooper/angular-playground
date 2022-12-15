@@ -1,9 +1,10 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
+<h1 class="text-3xl font-bold">
+  Login
 </h1>
 <form [formGroup]="loginForm"
       (ngSubmit)="login()">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill"
+                  class="mb-4">
     <mat-label>Email</mat-label>
     <input matInput
            placeholder="leerox@gmail.com"
@@ -11,12 +12,15 @@
     <mat-error *ngIf="loginForm.controls.email.hasError('required')">Please provide an email.</mat-error>
     <mat-error *ngIf="loginForm.controls.email.hasError('email')">Please provide a valid email.</mat-error>
   </mat-form-field>
+  <br />
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
     <input matInput
            formControlName="password">
     <mat-error *ngIf="loginForm.controls.password.hasError('required')">Please provide a password.</mat-error>
-    <mat-error *ngIf="loginForm.controls.password.hasError('')">Password must be 8 characters long.</mat-error>
+    <mat-error *ngIf="loginForm.controls.password.hasError('minlength')">Password must be 8 characters long.</mat-error>
   </mat-form-field>
 
 </form>
+
+<!-- {{ loginForm.controls.password.errors | json}} -->
