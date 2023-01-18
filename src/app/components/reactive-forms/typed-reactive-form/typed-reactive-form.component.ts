@@ -20,6 +20,9 @@ export class TypedReactiveFormComponent implements OnInit {
   ngOnInit(): void {}
 
   login(): void {
-    // do stuff
+    this.loginForm.patchValue({
+      email: '10',
+      password: '21',
+    });
   }
 }

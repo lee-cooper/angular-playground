@@ -18,6 +18,7 @@ import {
 import { UnderlineDirective } from './directives/underline.directive';
 import { MaterialModule } from './modules/material.module';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PracticeComponent } from './components/reactive-forms/practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     TodoItemComponent,
     UnderlineDirective,
     TypedReactiveFormComponent,
+    PracticeComponent,
   ],
   imports: [
     BrowserModule,
