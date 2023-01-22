@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class PracticeComponent implements OnInit {
   loginForm = this.fb.group({
     email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.minLength(8), Validators.required]],
+    password: ['', [Validators.required]],
   });
 
   constructor(private fb: FormBuilder) {}
