@@ -1,38 +1,44 @@
 <mat-card appearance="outlined"
-          class="inline-block p-6">
+  class="inline-block p-6">
   <h1 style="text-align: center">Login</h1>
   <form (ngSubmit)="login()"
-        [formGroup]="loginForm">
+    [formGroup]="loginForm">
     <mat-form-field>
       <mat-label>Email</mat-label>
       <mat-icon matPrefix>email</mat-icon>
       <input type="email"
-             matInput
-             placeholder="name@domain.com"
-             formControlName="email">
-      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
-        Email is required.
-      </mat-error>
-      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
-        Email must be valid.
-      </mat-error>
+        matInput
+        placeholder="name@domain.com"
+        formControlName="email">
+      @if (loginForm.get('email')?.hasError('required')) {
+        <mat-error>
+          Email is required.
+        </mat-error>
+      }
+      @if (loginForm.get('email')?.hasError('email')) {
+        <mat-error>
+          Email must be valid.
+        </mat-error>
+      }
     </mat-form-field>
     <br />
     <mat-form-field>
       <mat-label>Password</mat-label>
       <mat-icon matPrefix>lock</mat-icon>
       <input type="password"
-             matInput
-             formControlName="password">
-      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-        Password is required.
-      </mat-error>
+        matInput
+        formControlName="password">
+      @if (loginForm.get('password')?.hasError('required')) {
+        <mat-error>
+          Password is required.
+        </mat-error>
+      }
     </mat-form-field>
     <br />
     <div style="display: flex; justify-content: center">
       <button mat-raised-button
-              type="submit"
-              color="primary">Submit</button>
+        type="submit"
+      color="primary">Submit</button>
     </div>
 
   </form>

@@ -2,23 +2,31 @@
   Login
 </h1>
 <form [formGroup]="loginForm"
-      (ngSubmit)="login()">
+  (ngSubmit)="login()">
   <mat-form-field appearance="fill"
-                  class="mb-4">
+    class="mb-4">
     <mat-label>Email</mat-label>
     <input matInput
-           placeholder="leerox@gmail.com"
-           formControlName="email">
-    <mat-error *ngIf="loginForm.controls.email.hasError('required')">Please provide an email.</mat-error>
-    <mat-error *ngIf="loginForm.controls.email.hasError('email')">Please provide a valid email.</mat-error>
+      placeholder="leerox@gmail.com"
+      formControlName="email">
+    @if (loginForm.controls.email.hasError('required')) {
+      <mat-error>Please provide an email.</mat-error>
+    }
+    @if (loginForm.controls.email.hasError('email')) {
+      <mat-error>Please provide a valid email.</mat-error>
+    }
   </mat-form-field>
   <br />
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
     <input matInput
-           formControlName="password">
-    <mat-error *ngIf="loginForm.controls.password.hasError('required')">Please provide a password.</mat-error>
-    <mat-error *ngIf="loginForm.controls.password.hasError('minlength')">Password must be 8 characters long.</mat-error>
+      formControlName="password">
+    @if (loginForm.controls.password.hasError('required')) {
+      <mat-error>Please provide a password.</mat-error>
+    }
+    @if (loginForm.controls.password.hasError('minlength')) {
+      <mat-error>Password must be 8 characters long.</mat-error>
+    }
   </mat-form-field>
 
 </form>
