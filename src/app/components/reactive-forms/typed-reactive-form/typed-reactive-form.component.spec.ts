@@ -8,8 +8,8 @@ describe('TypedReactiveFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TypedReactiveFormComponent ]
-    })
+    imports: [TypedReactiveFormComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(TypedReactiveFormComponent);

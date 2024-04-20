@@ -11,13 +11,11 @@ describe('NgContentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        NgContentComponent,
+    imports: [NgContentComponent,
         SingleProjectionComponent,
         ConditionalProjectionComponent,
-        MultiSlotProjectionComponent,
-      ],
-    }).compileComponents();
+        MultiSlotProjectionComponent,],
+}).compileComponents();
 
     fixture = TestBed.createComponent(NgContentComponent);
     component = fixture.componentInstance;

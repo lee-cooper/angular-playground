@@ -8,8 +8,8 @@ describe('MultiSlotProjectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MultiSlotProjectionComponent],
-    }).compileComponents();
+    imports: [MultiSlotProjectionComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(MultiSlotProjectionComponent);
     component = fixture.componentInstance;

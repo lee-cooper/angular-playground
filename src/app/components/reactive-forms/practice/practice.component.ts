@@ -1,10 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { MatButton } from '@angular/material/button';
+import { MatInput } from '@angular/material/input';
+import { MatIcon } from '@angular/material/icon';
+import { MatFormField, MatLabel, MatPrefix, MatError } from '@angular/material/form-field';
+import { MatCard } from '@angular/material/card';
 
 @Component({
-  selector: 'app-practice',
-  templateUrl: './practice.component.html',
-  styleUrls: ['./practice.component.scss'],
+    selector: 'app-practice',
+    templateUrl: './practice.component.html',
+    styleUrls: ['./practice.component.scss'],
+    standalone: true,
+    imports: [
+        MatCard,
+        ReactiveFormsModule,
+        MatFormField,
+        MatLabel,
+        MatIcon,
+        MatPrefix,
+        MatInput,
+        MatError,
+        MatButton,
+        JsonPipe,
+    ],
 })
 export class PracticeComponent implements OnInit {
   loginForm = this.fb.group({

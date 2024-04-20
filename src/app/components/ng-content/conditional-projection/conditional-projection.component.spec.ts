@@ -8,8 +8,8 @@ describe('ConditionalProjectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ConditionalProjectionComponent],
-    }).compileComponents();
+    imports: [ConditionalProjectionComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(ConditionalProjectionComponent);
     component = fixture.componentInstance;

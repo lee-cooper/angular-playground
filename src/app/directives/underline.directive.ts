@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appUnderline]',
+    selector: '[appUnderline]',
+    standalone: true,
 })
 export class UnderlineDirective {
   @Input() appUnderline = 'underline';
