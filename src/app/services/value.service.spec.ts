@@ -11,14 +11,14 @@ describe('ValueService', () => {
     expect(service.getValue()).toBe('real value');
   });
 
-  it('#getObservableValue should return value from observable', (done: DoneFn) => {
+  it('#getObservableValue should return value from observable', (done) => {
     service.getObservableValue().subscribe((value) => {
       expect(value).toBe('observable value');
       done();
     });
   });
 
-  it('#getPromiseValue should return value from a promise', (done: DoneFn) => {
+  it('#getPromiseValue should return value from a promise', (done) => {
     service.getPromiseValue().then((value) => {
       expect(value).toBe('promise value');
       done();

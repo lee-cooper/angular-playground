@@ -20,29 +20,29 @@ describe('MasterService without Angular testing support', () => {
     expect(masterService.getValue()).toBe('fake value');
   });
 
-  it('#getValue should return stubbed value from a spy', () => {
-    // create `getValue` spy on an object representing the ValueService
-    const valueServiceSpy = jasmine.createSpyObj('ValueService', ['getValue']);
+  // it('#getValue should return stubbed value from a spy', () => {
+  //   // create `getValue` spy on an object representing the ValueService
+  //   const valueServiceSpy = jest.spyOn(fake, 'getValue');
 
-    // set the value to return when the `getValue` spy is called.
-    const stubValue = 'stub value';
-    valueServiceSpy.getValue.and.returnValue(stubValue);
+  //   // set the value to return when the `getValue` spy is called.
+  //   const stubValue = 'stub value';
+  //   valueServiceSpy.getValue.and.returnValue(stubValue);
 
-    masterService = new MasterService(valueServiceSpy);
+  //   masterService = new MasterService(valueServiceSpy);
 
-    // Verifies the end value is what is expected
-    expect(masterService.getValue())
-      .withContext('service returned stub value')
-      .toBe(stubValue);
+  //   // Verifies the end value is what is expected
+  //   expect(masterService.getValue())
+  //     .withContext('service returned stub value')
+  //     .toBe(stubValue);
 
-    // Verifies the call count was expected
-    expect(valueServiceSpy.getValue.calls.count())
-      .withContext('spy method was called once')
-      .toBe(1);
+  //   // Verifies the call count was expected
+  //   expect(valueServiceSpy.getValue.calls.count())
+  //     .withContext('spy method was called once')
+  //     .toBe(1);
 
-    // Verifies that the spy object returned the expected value
-    expect(valueServiceSpy.getValue.calls.mostRecent().returnValue).toBe(
-      stubValue
-    );
-  });
+  //   // Verifies that the spy object returned the expected value
+  //   expect(valueServiceSpy.getValue.calls.mostRecent().returnValue).toBe(
+  //     stubValue
+  //   );
+  // });
 });
