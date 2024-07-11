@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   preset: "jest-preset-angular",
   setupFilesAfterEnv: ["<rootDir>/setupJest.ts"],
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/dist/"],
@@ -6,7 +7,7 @@ module.exports = {
     "^.+\\.tsx?$": [
       "jest-preset-angular",
       {
-        tsConfig: "<rootDir>/tsconfig.spec.json",
+        tsconfig: "<rootDir>/tsconfig.spec.json",
         stringifyContentPathRegex: "\\.html$",
       },
     ],
