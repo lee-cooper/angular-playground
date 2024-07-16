@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { MatCard } from '@angular/material/card';
@@ -11,7 +11,6 @@ import {
 } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-practice',
@@ -31,15 +30,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JsonPipe,
   ],
 })
-export class PracticeComponent implements OnInit {
+export class PracticeComponent {
   loginForm = this.fb.group({
     email: ['', [Validators.email, Validators.required]],
     password: ['', [Validators.required]],
   });
 
   constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void {}
 
   login(): void {
     if (this.loginForm.invalid) return;

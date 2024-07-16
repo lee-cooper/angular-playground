@@ -1,16 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-conditional-projection',
-    templateUrl: './conditional-projection.component.html',
-    styleUrls: ['./conditional-projection.component.scss'],
-    standalone: true
+  selector: 'app-conditional-projection',
+  templateUrl: './conditional-projection.component.html',
+  styleUrls: ['./conditional-projection.component.scss'],
+  standalone: true,
 })
-export class ConditionalProjectionComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ConditionalProjectionComponent {}

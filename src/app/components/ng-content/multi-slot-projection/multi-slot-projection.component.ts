@@ -1,16 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-multi-slot-projection',
-    templateUrl: './multi-slot-projection.component.html',
-    styleUrls: ['./multi-slot-projection.component.scss'],
-    standalone: true
+  selector: 'app-multi-slot-projection',
+  templateUrl: './multi-slot-projection.component.html',
+  styleUrls: ['./multi-slot-projection.component.scss'],
+  standalone: true,
 })
-export class MultiSlotProjectionComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class MultiSlotProjectionComponent {}

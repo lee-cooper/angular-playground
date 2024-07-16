@@ -15,6 +15,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InputComponent {
   @Input() firstName!: string;
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input({ alias: 'last' }) lastName!: string;
   @Input({ required: true }) age!: number;
   @Input({ transform: (value: string) => value.toUpperCase() }) city!: string;
