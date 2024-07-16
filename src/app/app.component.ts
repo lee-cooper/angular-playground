@@ -4,8 +4,8 @@ import {
   MatSidenavContainer,
   MatSidenavContent,
 } from '@angular/material/sidenav';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './navigation/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 @Component({
@@ -19,6 +19,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     NavigationComponent,
     MatSidenavContent,
     RouterOutlet,
+    HeaderComponent,
   ],
 })
 export class AppComponent {
