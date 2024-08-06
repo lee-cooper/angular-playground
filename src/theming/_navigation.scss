@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin navigation($my-theme) {
+  .nav .active {
+    background-color: mat.get-theme-color($my-theme, primary);
+    color: white;
+  }
+}

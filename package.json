@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "docker-start": "docker run -p 4201:4200 angular-playground",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",

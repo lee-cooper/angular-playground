@@ -1,7 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "./theming/navigation" as navigation;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@include mat.core();
+
+$my-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$violet-palette,
+    ),
+  )
+);
+
+html {
+  // Emit theme-dependent styles for common features used across multiple components.
+  @include mat.core-theme($my-theme);
+
+  // Emit styles for MatButton based on `$my-theme`. Because the configuration
+  // passed to `define-theme` omits typography, `button-theme` will not
+  // emit any typography styles.
+  @include mat.button-theme($my-theme);
+  @include navigation.navigation($my-theme);
+
+  // Include the theme mixins for other components you use here.
+}
 
 html,
 body {

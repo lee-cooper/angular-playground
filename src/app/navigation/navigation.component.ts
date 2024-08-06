@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
-  template: `<nav class="nav ">
-    <a routerLink="/input-output" class="link">input-output</a>
-    <a routerLink="/ng-content" class="link">ng-content</a>
-    <a routerLink="/reactive-forms" class="link">reactive-forms</a>
-    <a routerLink="/drag-and-drop" class="link">drag-and-drop</a>
+  template: `<nav class="nav">
+    <a routerLink="/input-output" class="link" routerLinkActive="active"
+      >input-output</a
+    >
+    <a routerLink="/ng-content" class="link" routerLinkActive="active"
+      >ng-content</a
+    >
+    <a routerLink="/reactive-forms" class="link" routerLinkActive="active"
+      >reactive-forms</a
+    >
+    <a routerLink="/drag-and-drop" class="link" routerLinkActive="active"
+      >drag-and-drop</a
+    >
   </nav>`,
   styles: `
     .nav {
@@ -19,12 +27,15 @@ import { RouterLink } from '@angular/router';
         display: inline-block;
         text-align: center;
         padding: 1rem 0;
-        border: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
         border-style: inset;
+        text-transform: uppercase;
+        font-weight: bold;
       }
     }
   `,
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
 })
 export class NavigationComponent {}
